@@ -23,7 +23,9 @@
 	"keywords": [
 		"cli-app",
 		"cli",
-		""
+		"colors",
+	  	"styles",
+	  	"print"
 	],
 	"dependencies": {
 		"ansi-color": "^0.2.1",

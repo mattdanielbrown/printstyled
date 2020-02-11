@@ -1,4 +1,4 @@
-# colortext [![Build Status](https://travis-ci.com/mattdanielbrown/colortext.svg?branch=master)](https://travis-ci.com/mattdanielbrown/colortext)
+# printstyled [![Build Status](https://travis-ci.com/mattdanielbrown/printstyled.svg?branch=master)](https://travis-ci.com/mattdanielbrown/printstyled)
 
 > ### CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.
 
@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --global colortext
+$ npm install --global printstyled
 ```
 
 
@@ -14,27 +14,27 @@ $ npm install --global colortext
 
 ```shell script
 
-$ colortext TEXT [COLOR] [STYLE(S)...]
+$ printstyled TEXT [COLOR] [STYLE(S)...]
 
 Options
   [COLOR]  		color name 		[Default: white]
   [STYLE(S)]...	style name(s)	[Default: none / normal]
                     Availble Style Values: 'bold', 'italic', 'underline', 'rev'
 Examples
-  $  colortext "Testing" blue
+  $  printstyled "Testing" blue
          Testing
 
-  $  colortext "Testing 2" red bold
+  $  printstyled "Testing 2" red bold
          Testing 2
 
-  $  colortext "Testing 3" green bold italic
+  $  printstyled "Testing 3" green bold italic
      Testing 3
 ```
 
 
 ## API
 
-### `colortext text [color] [style(s)]`
+### `printstyled text [color] [style(s)]`
 
 #### text
 
@@ -60,19 +60,19 @@ Styles to apply.
 ## CLI
 
 ```
-$ npm install --global colortext
+$ npm install --global printstyled
 ```
 
 ```shell script
 
 NAME
-  colortext
+  printstyled
 
 USAGE
-  $ colortext TEXT [COLOR] [STYLE(S)...]
+  $ printstyled TEXT [COLOR] [STYLE(S)...]
 
 HELP
-  $ colortext --help
+  $ printstyled --help
 
 OPTIONS
 
@@ -86,12 +86,12 @@ OPTIONS
 
 EXAMPLES
 
-  $  colortext "Testing" blue
+  $  printstyled "Testing" blue
     # =>  Testing
 
-  $  colortext "Testing 2" red bold
+  $  printstyled "Testing 2" red bold
     # =>  Testing 2
 
-  $  colortext "Testing 3" green bold italic
+  $  printstyled "Testing 3" green bold italic
     # =>  Testing 3
 ```
