@@ -3,16 +3,20 @@
 > ### CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.
 
 
+![Screenshot of printstyled's Usage message.](documentation/assets/images/screenshots/printstyled-help-usage-message-screenshot.png)
+*Screenshot of `printstyled`'s Usage Message (in a Dracula-themed terminal)*
+
+
 ## Install
 
-```
+```bash
 $ npm install --global printstyled
 ```
 
 
 ## Usage
 
-```shell script
+```sh
 
 $ printstyled TEXT [COLOR] [STYLE(S)...]
 
@@ -34,55 +38,45 @@ Examples
 
 ## API
 
-### `printstyled text [color] [style(s)]`
+### `printstyled TEXT [COLOR] [STYLE, STYLE2...]`
 
-#### text
+**TEXT**	: *The text string to style.*
+Type: `String`
+> Note: *Required*
 
+
+**COLOR** : *Name of color to apply.*
 Type: `string`
+> Default: `white` or default forground color.
 
-The text string to style.
 
-#### color
-
-Type: `string`
-
-Name of color to apply.
-
-##### style(s)
-
+**STYLE(S)**: *Styles to apply.*
 Type: `string(s)`
-
-Default: `none` or `normal`
-
-Styles to apply.
+> Default: `none` or `normal`
 
 
 ## CLI
 
-```
-$ npm install --global printstyled
+```bash
+$ printstyled TEXT [COLOR] [STYLE(S)...]
 ```
 
-```shell script
-
+```sh
 NAME
   printstyled
 
 USAGE
-  $ printstyled TEXT [COLOR] [STYLE(S)...]
+  $ printstyled TEXT [COLOR] [STYLE, STYLE2...]
 
 HELP
   $ printstyled --help
 
 OPTIONS
+  COLOR : 'color name'
+  # (white | blue | red | green | yellow)	Default: white
 
-  [COLOR]         color name
-    # (Availibe Colors: 'white', 'blue', 'red', 'green', 'yellow')
-    # [Default: white]
-
-  [STYLE(S)...]    style name(s)
-    # (Availible Styles: 'bold', 'italic', 'underline', 'rev')
-    # [Default: none / normal]
+  STYLE(S) : 'style name, ...'
+  # (bold | italic | underline | rev)		Default: none / normal
 
 EXAMPLES
 
