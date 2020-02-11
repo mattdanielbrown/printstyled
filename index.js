@@ -2,12 +2,19 @@
 
 const parseOptions = require('./util/parse-options');
 
-module.exports = (input, colorName) => {
-	if (typeof input !== 'string') {
-		throw new TypeError(`Expected a string, got ${typeof input}`);
-	}
+module.exports = (input, colorName, otherOpts) => {
+	// if (typeof input !== 'string') {
+	// 	throw new TypeError(`Expected a string, got ${typeof input}`);
+	// }
 
-	return parseOptions(input, colorName, false);
+	let defaultColor = 'white';
+	let defaultText = 'Testing';
+	let defaultStyle = 'none';
+	return parseOptions(
+		input || defaultText,
+		colorName || defaultColor,
+		otherOpts || defaultStyle
+	);
 
 	// return `${input} & ${postfix}`;
 };

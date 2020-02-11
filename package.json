@@ -1,7 +1,7 @@
 {
 	"name": "colortext",
 	"version": "0.0.0",
-	"description": "CLI tool to intuitively colorize text strings in Bash, Shell, and Javascript.",
+	"description": "CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.",
 	"license": "MIT",
 	"repository": "mattdanielbrown/colortext",
 	"author": {
@@ -28,7 +28,10 @@
 	"dependencies": {
 		"ansi-color": "^0.2.1",
 		"chalk": "^3.0.0",
-		"meow": "^5.0.0"
+		"cli-color": "^2.0.0",
+		"control-sequence-introducer": "^0.0.2",
+		"meow": "^5.0.0",
+		"np": "^6.0.0"
 	},
 	"devDependencies": {
 		"ava": "^2.1.0",
