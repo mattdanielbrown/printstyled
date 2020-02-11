@@ -1,44 +1,46 @@
-"use strict";
+/* eslint-disable no-tabs */
+'use strict'
 
-const colors = require("chalk");
+const colors = require('chalk')
 const mainTitle = (mainTitleText) => {
-    return colors.green.bold.inverse(mainTitleText);
-};
+  return colors.green.bold.inverse(mainTitleText)
+}
 const yellowTitle = (titleText) => {
-    return colors.yellow.underline.dim(titleText);
-};
+  return colors.yellow.underline.dim(titleText)
+}
 const exampleResult = (resultText) => {
-    return colors.italic.dim(resultText);
-};
+  return colors.italic.dim(resultText)
+}
 const exampleCommand = (exampleText) => {
-    return colors.white(exampleText);
-};
+  return colors.white(exampleText)
+}
 const dollarSign = () => {
-    return colors.green.dim("$");
-};
+  return colors.green.dim('$')
+}
 // noinspection JSLint,JSLint
 const commandOption = (optionText) => {
-    return colors.cyan.italic(optionText);
-};
+  return colors.cyan.italic(optionText)
+}
 module.exports = () => {
-    // noinspection JSUnresolvedFunction
-    return `${mainTitle("  colortext  ")}
+  // noinspection JSUnresolvedFunction
+  return `${mainTitle('  colortext  ')}
 
-    ${yellowTitle("Usage")}
-      ${dollarSign()} colortext ${commandOption("TEXT")} [${commandOption("COLOR")}] [${commandOption("STYLE(S)...")}]
+    ${yellowTitle('Usage')}
+      ${dollarSign()} colortext ${commandOption('TEXT')} [${commandOption('COLOR')}] [${commandOption('STYLE(S)...')}]
 
-    ${yellowTitle("Options")}
-      ${commandOption("[COLOR]")}  		color name 		[Default: white]
-      ${commandOption("[STYLE(S)]...")}	style name(s)	[Default: none / normal]
+    ${yellowTitle('Options')}
+      ${commandOption('[COLOR]')}  		color name 		[Default: white]
+      // eslint-disable-next-line no-tabs
+      ${commandOption('[STYLE(S)]...')}	style name(s)	[Default: none / normal]
                         ${exampleResult(("Availble Style Values: 'bold', 'italic', 'underline', 'rev'"))}
-    ${yellowTitle("Examples")}
+    ${yellowTitle('Examples')}
       ${dollarSign()}${exampleCommand("  colortext 'Testing' blue'")}
-            ${colors.blue(" Testing")}
+            ${colors.blue(' Testing')}
 
       ${dollarSign()}${exampleCommand("  colortext 'Testing 2' red bold")}
-            ${colors.red.bold(" Testing 2")}
+            ${colors.red.bold(' Testing 2')}
 
       ${dollarSign()}${exampleCommand("  colortext 'Testing 3' green bold italic ")}
-        ${colors.green.bold.italic(" Testing 3")}
-`;
-};
+        ${colors.green.bold.italic(' Testing 3')}
+`
+}

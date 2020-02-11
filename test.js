@@ -1,13 +1,13 @@
-import test from 'ava';
-import colortext from '.';
+import test from 'ava'
+import colortext from '.'
 
 test('title', t => {
-	t.throws(() => {
-		colortext(123);
-	}, {
-		instanceOf: TypeError,
-		message: 'Expected a string, got number'
-	});
+  t.throws(() => {
+    colortext(123)
+  }, {
+    instanceOf: TypeError,
+    message: 'Expected a string, got number'
+  });
 
-	t.is(colortext('unicorns'), 'unicorns & rainbows');
+  t.is(colortext('unicorns'), 'unicorns & rainbows')
 });
