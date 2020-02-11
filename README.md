@@ -1,45 +1,60 @@
 # colortext [![Build Status](https://travis-ci.com/mattdanielbrown/colortext.svg?branch=master)](https://travis-ci.com/mattdanielbrown/colortext)
 
-> CLI tool to intuitively colorize text strings in Bash, Shell, and Javascript.
+> ### CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.
 
 
 ## Install
 
 ```
-$ npm install colortext
+$ npm install --global colortext
 ```
 
 
 ## Usage
 
-```js
-const colortext = require('colortext');
+```shell script
 
-colortext('unicorns');
-//=> 'unicorns & rainbows'
+$ colortext TEXT [COLOR] [STYLE(S)...]
+
+Options
+  [COLOR]  		color name 		[Default: white]
+  [STYLE(S)]...	style name(s)	[Default: none / normal]
+                    Availble Style Values: 'bold', 'italic', 'underline', 'rev'
+Examples
+  $  colortext "Testing" blue
+         Testing
+
+  $  colortext "Testing 2" red bold
+         Testing 2
+
+  $  colortext "Testing 3" green bold italic
+     Testing 3
 ```
 
 
 ## API
 
-### colortext(input, options?)
+### `colortext text [color] [style(s)]`
 
-#### input
+#### text
 
 Type: `string`
 
-Lorem ipsum.
+The text string to style.
 
-#### options
+#### color
 
-Type: `object`
+Type: `string`
 
-##### foo
+Name of color to apply.
 
-Type: `boolean`\
-Default: `false`
+##### style(s)
 
-Lorem ipsum.
+Type: `string(s)`
+
+Default: `none` or `normal`
+
+Styles to apply.
 
 
 ## CLI
@@ -48,18 +63,35 @@ Lorem ipsum.
 $ npm install --global colortext
 ```
 
-```
-$ colortext --help
+```shell script
 
-  Usage
-    colortext [input]
+NAME
+  colortext
 
-  Options
-    --foo  Lorem ipsum [Default: false]
+USAGE
+  $ colortext TEXT [COLOR] [STYLE(S)...]
 
-  Examples
-    $ colortext
-    unicorns & rainbows
-    $ colortext ponies
-    ponies & rainbows
+HELP
+  $ colortext --help
+
+OPTIONS
+
+  [COLOR]         color name
+    # (Availibe Colors: 'white', 'blue', 'red', 'green', 'yellow')
+    # [Default: white]
+
+  [STYLE(S)...]    style name(s)
+    # (Availible Styles: 'bold', 'italic', 'underline', 'rev')
+    # [Default: none / normal]
+
+EXAMPLES
+
+  $  colortext "Testing" blue
+    # =>  Testing
+
+  $  colortext "Testing 2" red bold
+    # =>  Testing 2
+
+  $  colortext "Testing 3" green bold italic
+    # =>  Testing 3
 ```
