@@ -1,14 +1,14 @@
 'use strict';
 
 const colors = require('chalk');
-const mainTitle = (mainTitleText) => { return colors["green"].bold.inverse(mainTitleText); };
-const yellowTitle = (titleText) => { return colors["yellow"].underline.dim(titleText); };
-const exampleResult = (resultText) => { return colors["italic"].dim(resultText); };
-const exampleCommand = (exampleText) => { return colors["white"](exampleText); };
-const dollarSign = () => { return colors["green"].dim('$'); };
-const commandOption = (optionText) => { return colors["cyan"].italic(optionText); };
+const mainTitle = (mainTitleText) => { return colors['green'].bold.inverse(mainTitleText); };
+const yellowTitle = (titleText) => { return colors['yellow'].underline.dim(titleText); };
+const exampleResult = (resultText) => { return colors['italic'].dim(resultText); };
+const exampleCommand = (exampleText) => { return colors['white'](exampleText); };
+const dollarSign = () => { return colors['green'].dim('$'); };
+const commandOption = (optionText) => { return colors['cyan'].italic(optionText); };
 module.exports = () => {
-	return `${mainTitle("  colortext  ")}
+	return `${mainTitle('  colortext  ')}
 
 	${yellowTitle('Usage')}
 	  ${dollarSign()} colortext ${commandOption('TEXT')} [${commandOption('COLOR')}] [${commandOption('STYLE(S)...')}]
