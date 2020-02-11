@@ -1,4 +1,4 @@
-/* eslint-disable no-tabs */
+/* eslint-disable capitalized-comments, arrow-parens, quotes, semi, padding-line-between-statements */
 'use strict';
 
 const colors = require('chalk');
@@ -17,12 +17,13 @@ const exampleCommand = (exampleText) => {
 const dollarSign = () => {
 	return colors.green.dim('$');
 };
+
 // noinspection JSLint,JSLint
 const commandOption = (optionText) => {
 	return colors.cyan.italic(optionText);
 };
 module.exports = () => {
-// noinspection JSUnresolvedFunction
+	// noinspection JSUnresolvedFunction
 	return `${mainTitle('  colortext  ')}
 
 ${yellowTitle('Usage')}

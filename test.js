@@ -1,11 +1,22 @@
-import test from 'ava';
 import colortext from '.';
+const test = require('ava');
 
-test('title', t => {
-	t.throws(() => {
-		colortext(123);
-	}, {
-		instanceOf: TypeError, message: 'Expected a string, got number'
-	});
-	t.is(colortext('some text'), 'blue');
+test('foo', t => {
+	console.log(colortext('Blue, Bold Text', 'blue', ['bold']));
+	t.pass();
+});
+
+test('colorized', t => {
+	console.log(colortext('Green Text', 'green'));
+	t.pass();
+});
+
+test('stylized', t => {
+	console.log(colortext('Green, Bold, Italic Text', 'green', ['bold', 'italic']));
+	t.pass();
+});
+
+test('bar', async t => {
+	const bar = Promise.resolve('bar');
+	t.is(await bar, 'bar');
 });

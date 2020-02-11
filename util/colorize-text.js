@@ -1,42 +1,47 @@
-'use strict'
-const colors = require('chalk')
+/* eslint-disable capitalized-comments, indent */
+
+'use strict';
+
+const colors = require('chalk');
+
 module.exports = (originalText, colorName) => {
-  let resultingText
+  let resultingText;
   switch (colorName) {
     case 'black':
-      resultingText = colors.black(originalText)
-      break
+      resultingText = colors.black(originalText);
+      break;
     case 'blue':
-      resultingText = colors.blue(originalText)
-      break
+      resultingText = colors.blue(originalText);
+      break;
     case 'cyan':
-      resultingText = colors.cyan(originalText)
-      break
+      resultingText = colors.cyan(originalText);
+      break;
     case 'green':
-      resultingText = colors.green(originalText)
-      break
+      resultingText = colors.green(originalText);
+      break;
     case 'orange':
       // noinspection JSUnresolvedFunction,JSUnresolvedFunction,JSUnresolvedFunction
-      resultingText = colors.orange(originalText)
-      break
+      resultingText = colors.orange(originalText);
+      break;
     case 'purple':
-      resultingText = colors.purple(originalText)
-      break
+      resultingText = colors.purple(originalText);
+      break;
     case 'red':
-      resultingText = colors.red(originalText)
-      break
+      resultingText = colors.red(originalText);
+      break;
     case 'yellow':
-      resultingText = colors.yellow(originalText)
-      break
+      resultingText = colors.yellow(originalText);
+      break;
     case 'gray':
-      resultingText = colors.gray(originalText)
-      break
+      resultingText = colors.gray(originalText);
+      break;
     case 'white':
-      resultingText = colors.white(originalText)
-      break
+      resultingText = colors.white(originalText);
+      break;
     default:
-      resultingText = colors.white(originalText)
-      break
+      resultingText = colors.white(originalText);
+      break;
   }
-  return resultingText
-}
+
+  return resultingText;
+};
