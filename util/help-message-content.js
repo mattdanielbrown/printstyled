@@ -1,8 +1,6 @@
 'use strict';
 
 const colors = require('chalk');
-const csi = require('control-sequence-introducer');
-const clearScreen = require('./clear-screen');
 const mainTitle = (mainTitleText) => { return colors["green"].bold.inverse(mainTitleText); };
 const yellowTitle = (titleText) => { return colors["yellow"].underline.dim(titleText); };
 const exampleResult = (resultText) => { return colors["italic"].dim(resultText); };
