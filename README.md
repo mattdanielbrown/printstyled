@@ -1,4 +1,5 @@
-# printstyled [![Build Status](https://travis-ci.com/mattdanielbrown/printstyled.svg?branch=master)](https://travis-ci.com/mattdanielbrown/printstyled)
+# printstyled [(an NPM package)](https://www.npmjs.com/package/printstyled) 
+[![Build Status](https://travis-ci.com/mattdanielbrown/printstyled.svg?branch=master)](https://travis-ci.com/mattdanielbrown/printstyled)
 
 > ### CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.
 
