@@ -1,5 +1,5 @@
 {
-	"name": "colortext",
+	"name": "printstyled",
 	"version": "0.0.0",
 	"description": "CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.",
 	"license": "MIT",
