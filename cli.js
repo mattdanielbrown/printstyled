@@ -11,7 +11,7 @@ const flexiblePathToHelpMessageFile = path.join(
 const helpMessage = require(flexiblePathToHelpMessageFile);
 const colortext = require('.');
 const cli = meow(helpMessage());
-const otherArgs = function(cliAllInputs) {
+const otherArgs = function (cliAllInputs) {
 	if (cliAllInputs.length > 2) {
 		return cli.input.slice(2);
 	}
