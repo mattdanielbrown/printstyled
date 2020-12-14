@@ -1,6 +1,6 @@
 /* eslint-disable import-style */
 'use strict';
-import {dim, bold, inverse, italic, underline, normal} from 'chalk';
+const {dim, bold, inverse, italic, underline, normal} = require('chalk');
 
 module.exports = function (originalText, styleOptions) {
 	let resultingText = originalText;
