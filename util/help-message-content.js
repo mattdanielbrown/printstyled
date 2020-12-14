@@ -3,36 +3,36 @@
 
 const colors = require('chalk');
 const mainTitle = (mainTitleText) => {
-	return colors.green.bold.inverse(mainTitleText);
+  return colors.green.bold.inverse(mainTitleText);
 };
 const yellowTitle = (titleText) => {
-	return colors.yellow.underline.dim(titleText);
+  return colors.yellow.underline.dim(titleText);
 };
 const exampleResult = (resultText) => {
-	return colors.italic.dim(resultText);
+  return colors.italic.dim(resultText);
 };
 const exampleCommand = (exampleText) => {
-	return colors.white(exampleText);
+  return colors.white(exampleText);
 };
 const dollarSign = () => {
-	return colors.green.dim('$');
+  return colors.green.dim('$');
 };
 
 // noinspection JSLint,JSLint
 const commandOption = (optionText) => {
-	return colors.cyan.italic(optionText);
+  return colors.cyan.italic(optionText);
 };
 module.exports = () => {
-	// noinspection JSUnresolvedFunction
-	return `${mainTitle('  colortext  ')}
+  // noinspection JSUnresolvedFunction
+  return `${mainTitle('  colortext  ')}
 
 ${yellowTitle('Usage')}
 ${dollarSign()} colortext ${commandOption('TEXT')} [${commandOption('COLOR')}] [${commandOption('STYLE(S)...')}]
 
 ${yellowTitle('Options')}
-${commandOption('[COLOR]')}  		color name 		[Default: white]
+${commandOption('[COLOR]')}     color name    [Default: white]
 
-${commandOption('[STYLE(S)]...')}	style name(s)	[Default: none / normal]
+${commandOption('[STYLE(S)]...')}  style name(s)  [Default: none / normal]
 ${exampleResult(('Availble Style Values: "bold", "italic", "underline", "rev"'))}
 ${yellowTitle('Examples')}
 ${dollarSign()}${exampleCommand('  colortext "Testing blue"')}
