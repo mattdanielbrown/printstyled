@@ -30,7 +30,11 @@
 	},
 	"files": [
 		"index.js",
-		"cli.js"
+		"cli.js",
+		"util/help-message-content.js",
+		"util/other-text-styling.js",
+		"util/parse-options.js",
+		"util/colorize-text.js"
 	],
 	"keywords": [
 		"cli-app",
