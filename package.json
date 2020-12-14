@@ -4,7 +4,9 @@
 		"email": "developer@mattdanielbrown.com",
 		"url": "mattdanielbrown.com"
 	},
-	"bin": "cli.js",
+	"bin": {
+		"printstyled": "cli.js"
+	},
 	"dependencies": {
 		"ansi-color": "^0.2.1",
 		"chalk": "^4.1.0",
@@ -43,22 +45,36 @@
 	"scripts": {
 		"test": "xo && ava"
 	},
-	"version": "1.3.2",
-	"eslintConfig" : {
-		"rules"     : {
-			"indent" : [ "error" , "tab" ],
+	"version": "1.3.3",
+	"eslintConfig": {
+		"rules": {
+			"indent": [
+				"error",
+				"tab"
+			],
 			"unicorn/no-abusive-eslint-disable": "off"
 		},
-		"overrides" : [
+		"overrides": [
 			{
-				"files"         : [ "bin/*.js" , "lib/*.js" ] ,
-				"excludedFiles" : ["*.test.js", "util/other-text-styling.js"] ,
-				"rules"         : {
+				"files": [
+					"bin/*.js",
+					"lib/*.js"
+				],
+				"excludedFiles": [
+					"*.test.js",
+					"util/other-text-styling.js"
+				],
+				"rules": {
 					"unicorn/no-abusive-eslint-disable": "off",
-					"" : [ "error" , "single" ]
+					"": [
+						"error",
+						"single"
+					]
 				}
 			}
 		]
 	},
-	"eslintIgnore": ["util/other-text-styling.js"]
+	"eslintIgnore": [
+		"util/other-text-styling.js"
+	]
 }
