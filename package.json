@@ -13,7 +13,7 @@
 		"cli-color": "^2.0.0",
 		"control-sequence-introducer": "^0.0.2",
 		"meow": "^8.0.0",
-		"np": "^7.0.0"
+		"np": "^8.0.0"
 	},
 	"description": "CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.",
 	"devDependencies": {
