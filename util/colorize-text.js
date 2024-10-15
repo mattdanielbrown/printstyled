@@ -21,10 +21,12 @@ module.exports = (originalText, colorName) => {
       break;
     case 'orange':
       // noinspection JSUnresolvedFunction,JSUnresolvedFunction,JSUnresolvedFunction
-      resultingText = colors.orange(originalText);
+      // resultingText = colors.orange(originalText)
+      resultingText = colors.yellow(originalText);
       break;
     case 'purple':
-      resultingText = colors.purple(originalText);
+      // resultingText = colors.purple(originalText)
+      resultingText = colors.blue(originalText);
       break;
     case 'red':
       resultingText = colors.red(originalText);

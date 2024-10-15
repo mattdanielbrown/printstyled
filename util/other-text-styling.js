@@ -1,32 +1,33 @@
-/* eslint-disable capitalized-comments */
+/* eslint-disable import-style */
 'use strict';
-const colors = require('chalk');
-module.exports = function (originalText, styleOpts) {
+const {dim, bold, inverse, italic, underline, normal} = require('chalk');
+
+module.exports = function (originalText, styleOptions) {
 	let resultingText = originalText;
-	for (const styleOpt of styleOpts) {
-		switch (styleOpt) {
+	for (const otherOptions of styleOptions) {
+		switch (otherOptions) {
 			case 'bold':
-				// noinspection JSUnresolvedFunction
-				resultingText = colors.bold(resultingText);
+				// Noinspection JSUnresolvedFunction
+				resultingText = bold(resultingText);
 				break;
 			case 'italic':
-				// noinspection JSUnresolvedFunction
-				resultingText = colors.italic(resultingText);
+				// Noinspection JSUnresolvedFunction
+				resultingText = italic(resultingText);
 				break;
 			case 'underline':
-				// noinspection JSUnresolvedFunction
-				resultingText = colors.underline(resultingText);
+				// Noinspection JSUnresolvedFunction
+				resultingText = underline(resultingText);
 				break;
 			case 'dim':
-				/* noinspection JSUnresolvedFunction */
-				resultingText = colors.dim(resultingText);
+				/* Noinspection JSUnresolvedFunction */
+				resultingText = dim(resultingText);
 				break;
 			case 'rev':
-				/* noinspection JSUnresolvedFunction */
-				resultingText = colors.inverse(resultingText);
+				/* Noinspection JSUnresolvedFunction */
+				resultingText = inverse(resultingText);
 				break;
 			default:
-				resultingText = colors.normal(resultingText);
+				resultingText = normal(resultingText);
 				break;
 		}
 	}

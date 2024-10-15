@@ -1,18 +1,25 @@
-import colortext from '.';
+const printstyled = require('.');
 const test = require('ava');
 
+test('something', t => {
+	console.log(t);
+	console.log(printstyled('hello', 'blue'));
+	t.pass();
+});
+
 test('foo', t => {
-	console.log(colortext('Blue, Bold Text', 'blue', ['bold']));
+	console.log(printstyled('Blue, Bold Text', 'blue', ['bold']));
 	t.pass();
 });
 
 test('colorized', t => {
-	console.log(colortext('Green Text', 'green'));
+	console.log(printstyled('Green Text', 'green'));
 	t.pass();
 });
 
 test('stylized', t => {
-	console.log(colortext('Green, Bold, Italic Text', 'green', ['bold', 'italic']));
+	console.log(
+		printstyled('Green, Bold, Italic Text', 'green', ['bold', 'italic']));
 	t.pass();
 });
 

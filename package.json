@@ -1,24 +1,40 @@
 {
-	"name": "printstyled",
-	"version": "1.3.2",
-	"description": "CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.",
-	"license": "MIT",
-	"repository": "mattdanielbrown/colortext",
 	"author": {
 		"name": "Matt Daniel Brown",
 		"email": "developer@mattdanielbrown.com",
 		"url": "mattdanielbrown.com"
 	},
-	"bin": "cli.js",
+	"bin": {
+		"printstyled": "cli.js"
+	},
+	"dependencies": {
+		"ansi-color": "^0.2.1",
+		"chalk": "^4.1.0",
+		"cli-color": "^2.0.0",
+		"control-sequence-introducer": "^0.0.2",
+		"meow": "^8.0.0",
+		"np": "^7.0.0"
+	},
+	"description": "CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.",
+	"devDependencies": {
+		"ava": "^3.14.0",
+		"eslint": "^7.15.0",
+		"eslint-config-standard": "^16.0.2",
+		"eslint-plugin-import": "^2.20.1",
+		"eslint-plugin-node": "^11.0.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"xo": "^0.36.1"
+	},
 	"engines": {
 		"node": ">=8"
 	},
-	"scripts": {
-		"test": "xo && ava"
-	},
 	"files": [
 		"index.js",
-		"cli.js"
+		"cli.js",
+		"util/help-message-content.js",
+		"util/other-text-styling.js",
+		"util/parse-options.js",
+		"util/colorize-text.js"
 	],
 	"keywords": [
 		"cli-app",
@@ -27,22 +43,42 @@
 		"styles",
 		"print"
 	],
-	"dependencies": {
-		"ansi-color": "^0.2.1",
-		"chalk": "^3.0.0",
-		"cli-color": "^2.0.0",
-		"control-sequence-introducer": "^0.0.2",
-		"meow": "^5.0.0",
-		"np": "^6.0.0"
+	"license": "MIT",
+	"name": "printstyled",
+	"repository": "mattdanielbrown/printstyled",
+	"scripts": {
+		"test": "xo && ava"
 	},
-	"devDependencies": {
-		"ava": "^3.0.0",
-		"eslint": "^6.8.0",
-		"eslint-config-standard": "^14.1.0",
-		"eslint-plugin-import": "^2.20.1",
-		"eslint-plugin-node": "^11.0.0",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-standard": "^4.0.1",
-		"xo": "0.32.1"
-	}
+	"version": "1.3.4",
+	"eslintConfig": {
+		"rules": {
+			"indent": [
+				"error",
+				"tab"
+			],
+			"unicorn/no-abusive-eslint-disable": "off"
+		},
+		"overrides": [
+			{
+				"files": [
+					"bin/*.js",
+					"lib/*.js"
+				],
+				"excludedFiles": [
+					"*.test.js",
+					"util/other-text-styling.js"
+				],
+				"rules": {
+					"unicorn/no-abusive-eslint-disable": "off",
+					"": [
+						"error",
+						"single"
+					]
+				}
+			}
+		]
+	},
+	"eslintIgnore": [
+		"util/other-text-styling.js"
+	]
 }
