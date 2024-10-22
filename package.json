@@ -10,7 +10,7 @@
 	"dependencies": {
 		"ansi-color": "^0.2.1",
 		"chalk": "^4.1.0",
-		"cli-color": "^2.0.0",
+		"cli-color": "^2.0.1",
 		"control-sequence-introducer": "^0.0.2",
 		"meow": "^8.0.0",
 		"np": "^7.0.0"
