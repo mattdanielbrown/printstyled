@@ -17,7 +17,7 @@
 	},
 	"description": "CLI tool to intuitively colorize and stylize text in Bash and Javascript Terminals.",
 	"devDependencies": {
-		"ava": "^3.14.0",
+		"ava": "^6.3.0",
 		"eslint": "^7.15.0",
 		"eslint-config-standard": "^16.0.2",
 		"eslint-plugin-import": "^2.20.1",
